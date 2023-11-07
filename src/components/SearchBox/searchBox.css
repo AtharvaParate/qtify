@@ -1,0 +1,9 @@
+.search {
+  width: 66px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: "0px 8px 8px 0px";
+  padding: 8px;
+}
