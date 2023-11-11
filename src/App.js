@@ -6,17 +6,14 @@ import Button from "./components/Button";
 import HeroComponent from "./components/HeroComponent";
 import CardComponent from "./components/Card";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Card from "./components/Card";
 
 function App() {
   return (
     <>
       <Navbar />
       <HeroComponent />
-      <Router>
-        <Routes>
-          <Route path="/album/:slug" element={<CardComponent />} />
-        </Routes>
-      </Router>
+      <Card />
     </>
   );
 }

@@ -26,8 +26,9 @@
 body {
   line-height: 1.5;
   /* -webkit-font-smoothing: antialiased; */
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-family: "Poppins", sans-serif;
+  background-color: var(--css-black);
 }
 /*
   5. Improve media defaults
