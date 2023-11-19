@@ -1,19 +1,31 @@
-import logo from "./logo.svg";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/navbar";
-import SearchBox from "./components/SearchBox";
-import Button from "./components/Button";
 import HeroComponent from "./components/HeroComponent";
-import CardComponent from "./components/Card";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Card from "./components/Card";
+import Section from "./components/Section";
+
+const ENDPOINT = "https://qtify-backend-labs.crio.do/";
 
 function App() {
+  const [topAlbums, setTopAlbums] = useState([]);
+  const [newAlbums, setNewAlbums] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${ENDPOINT}albums/top`).then(({ data }) => {
+      setTopAlbums(data);
+    });
+    axios.get(`${ENDPOINT}albums/new`).then(({ data }) => {
+      setNewAlbums(data);
+    });
+  }, []);
+
   return (
     <>
       <Navbar />
       <HeroComponent />
-      <Card />
+      <Section title="Top Albums" data={topAlbums} />
+      <Section title="New Albums" data={newAlbums} />
     </>
   );
 }

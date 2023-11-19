@@ -1,22 +1,18 @@
 import React from "react";
 import "./card.css";
-import CardImage from "./Card_Image.png";
 
-export default () => {
+export default ({ imgSrc, followersCount, label }) => {
   return (
     <div className="card-wrapper">
       <div className="card">
         <div className="card-img-frame">
-          <img
-            className="card-img"
-            src="https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800"
-          />
+          <img className="card-img" src={imgSrc} />
         </div>
         <div className="card-content">
-          <span className="card-content-pill">100 follows</span>
+          <span className="card-content-pill">{followersCount} follows</span>
         </div>
       </div>
-      <p className="card-label">New English Songs</p>
+      <p className="card-label">{label}</p>
     </div>
   );
 };

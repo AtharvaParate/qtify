@@ -1,11 +1,10 @@
-
 .hs-content {
   background: var(--css-black);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 272px;
-  width: 100dvw;
+  width: 100%;
   color: var(--css-white);
   text-align: center;
   font-family: "Poppins", sans-serif;

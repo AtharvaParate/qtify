@@ -1,25 +1,22 @@
 .card-wrapper {
-  margin: 50px;
   height: 235px;
   width: 160px;
   display: flex;
   flex-direction: column;
   row-gap: 5px;
-  /* background-color: black; */
 }
 
 .card {
   border-radius: 10px;
   overflow: hidden;
-  object-fit: cover;
-  /* display: flex;
-  flex-direction: column; */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-img-frame {
   height: 170px;
   width: 100%;
-  flex: 1;
 }
 
 .card-img-frame img {
@@ -32,12 +29,9 @@
   flex: 1;
   height: 30px;
   background-color: var(--css-white);
-  padding: 2px;
 }
 
 .card-content-pill {
-  height: 23px;
-  width: 71px;
   background-color: var(--css-black);
   color: var(--css-white);
   border-radius: 10px;
