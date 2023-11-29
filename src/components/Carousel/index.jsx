@@ -12,7 +12,7 @@ import Card from "../Card";
 import LeftArrow from "./leftArrow.png";
 import RightArrow from "./rightArrow.png";
 
-export default ({ data }) => {
+export default ({ data, navId }) => {
   return (
     <div className="carousel-container">
       <Swiper
@@ -25,7 +25,10 @@ export default ({ data }) => {
         //   type: "fraction",
         // }}
         // navigation={true}
-        navigation={{ nextEl: ".arrow-right", prevEl: ".arrow-left" }}
+        navigation={{
+          nextEl: `.arrow-right-${navId}`,
+          prevEl: `.arrow-left-${navId}`,
+        }}
         virtual
       >
         {data.map((cardData) => (
@@ -38,10 +41,10 @@ export default ({ data }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="arrow-left arrow">
+      <div className={`arrow-left-${navId} arrow-left arrow`}>
         <img src={LeftArrow}></img>
       </div>
-      <div className="arrow-right arrow">
+      <div className={`arrow-right-${navId} arrow-right arrow`}>
         <img src={RightArrow}></img>
       </div>
     </div>

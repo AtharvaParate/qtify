@@ -27,7 +27,7 @@ export default ({ title, data, filters, executeFilter }) => {
           <Tab className="tab" key={f.key} label={f.label} />
         ))}
       </Tabs>
-      <Carousel data={data} />
+      <Carousel data={data} navId="filter" />
     </div>
   );
 };

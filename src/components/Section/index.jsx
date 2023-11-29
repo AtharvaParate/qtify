@@ -3,7 +3,7 @@ import Card from "../Card";
 import { useState } from "react";
 import Carousel from "../Carousel";
 
-export default ({ title, data }) => {
+export default ({ title, data, navId }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
@@ -20,7 +20,7 @@ export default ({ title, data }) => {
         </h1>
       </div>
       {isCollapsed ? (
-        <Carousel data={data} />
+        <Carousel data={data} navId={navId} />
       ) : (
         <div className="card-container">
           {data.map((cardData) => (
